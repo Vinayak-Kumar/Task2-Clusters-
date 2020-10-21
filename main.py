@@ -1,12 +1,10 @@
 # Importing the Required libraries
+
 import numpy as np
-
 import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
-
+import seaborn as sns
 from sklearn import datasets
-
 
 # Reading the data
 iris_df = pd.read_csv("Iris.csv", index_col = 0)
@@ -18,6 +16,7 @@ iris_df.info()
 
 # Plotting the pair plot
 sns.pairplot(iris_df, hue = 'Species')
+print("\n")
 # correlation matrix
 sns.heatmap(iris_df.corr())
 # Defining 'X'
